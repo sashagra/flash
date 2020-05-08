@@ -4,17 +4,7 @@
     outline: 0;
 }
 
-.oneStick {
-    display: flex;
-    flex-direction: column;
-}
-
-.oneStick img {
-    width: 100%;
-    max-width: 80px;
-}
-
-.fullCard img {
+.blockPicture img {
     width: 100%;
     max-width: 80px;
 }
