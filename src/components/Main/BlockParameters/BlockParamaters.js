@@ -17,10 +17,10 @@ import './BlockParameters.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 250
+    width: 250,
   },
   button: {
-    width: 140
+    width: 140,
   },
   formControl: {
     margin: theme.spacing(3),

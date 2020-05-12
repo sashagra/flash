@@ -26,13 +26,13 @@ const Main = (props) => {
     setScore(0)
   }
 
-  const clickHandler = score => {
+  const clickHandler = (score) => {
     setCountRound(countRound + 1)
     setScore(score)
   }
   let mainContent
   if (checkParams) {
-    mainContent = <BlockParameters dataParams={checkHandler} name={name}/>
+    mainContent = <BlockParameters dataParams={checkHandler} name={name} />
   } else if (!checkParams && countRound < countRoundPlay) {
     mainContent = (
       <BlockPlay

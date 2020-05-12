@@ -5,17 +5,16 @@ import wrongAnswer from '../../../../resources/sound/wrong.mp3'
 import correctAnswer from '../../../../resources/sound/correct.mp3'
 import './BlockAnswer.css'
 
-
 const useStyles = makeStyles((theme) => ({
   button: {
-    position: "absolute",
-    maxWidth: "40px",
-    transform: "translate(-105px, 10px)"
+    position: 'absolute',
+    maxWidth: '40px',
+    transform: 'translate(-105px, 10px)',
   },
   textField: {
     width: '30ch',
     paddingRight: '20px',
-    left: '10px'
+    left: '10px',
   },
 }))
 
@@ -36,12 +35,12 @@ const BlockAnswer = (props) => {
     event.preventDefault()
     const strAnswer = trueArr.join('')
     if (strAnswer === answerText) {
-      props.answerHandler(answerText, score+1)
-      correctAudioPlayer.current.currentTime = 0;
+      props.answerHandler(answerText, score + 1)
+      correctAudioPlayer.current.currentTime = 0
       correctAudioPlayer.current.play()
     } else if (strAnswer !== answerText) {
       props.answerHandler(answerText, score)
-      wrongAudioPlayer.current.currentTime = 0;
+      wrongAudioPlayer.current.currentTime = 0
       wrongAudioPlayer.current.play()
     }
     document.querySelector('#outlined-secondary').value = ''
@@ -58,7 +57,9 @@ const BlockAnswer = (props) => {
         prevent="true"
         className={classes.button}
         disabled
-      >ОТВЕТ</Button>
+      >
+        ОТВЕТ
+      </Button>
     )
   } else {
     buttonAnswer = (
@@ -70,7 +71,9 @@ const BlockAnswer = (props) => {
         color="primary"
         prevent="true"
         className={classes.button}
-      >ОТВЕТ</Button>
+      >
+        ОТВЕТ
+      </Button>
     )
   }
 
@@ -90,14 +93,8 @@ const BlockAnswer = (props) => {
               onChange={handleTextField}
             />
             {buttonAnswer}
-            <audio
-              src={wrongAnswer}
-              ref={wrongAudioPlayer}
-            />
-            <audio
-              src={correctAnswer}
-              ref={correctAudioPlayer}
-            />
+            <audio src={wrongAnswer} ref={wrongAudioPlayer} />
+            <audio src={correctAnswer} ref={correctAudioPlayer} />
           </form>
         </Grid>
       </Grid>

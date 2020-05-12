@@ -2,7 +2,7 @@
     flex: 1;
     display: flex;
     box-sizing: border-box;
-    background-color: #8fbe00;
+    background-color: rgb(53, 53, 156);
     background-image: url('../../resources/img/back.jpg');
     background-position: center center;
     background-repeat: no-repeat;

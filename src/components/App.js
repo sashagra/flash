@@ -7,23 +7,22 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     minHeight: '100vh',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
 }))
 
-
 const App = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState('')
   const classes = useStyles()
 
-  const checkName = name => {
-    setName(name);
+  const checkName = (name) => {
+    setName(name)
   }
 
   return (
     <div className={classes.root}>
       <Header name={name} />
-      <Main handleName={checkName} name={name}/>
+      <Main handleName={checkName} name={name} />
       <Footer />
     </div>
   )

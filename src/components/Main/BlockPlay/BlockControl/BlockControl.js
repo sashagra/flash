@@ -4,9 +4,6 @@ import KeyboardBackspaceSharpIcon from '@material-ui/icons/KeyboardBackspaceShar
 import questionMark from '../../../../resources/img/question.jpg'
 import Picture from '../BlockPicture/BlockPicture'
 import './BlockControl.css'
-// import CircularProgress from '@material-ui/core/CircularProgress';
-
-// const Picture = React.lazy(() => import('../BlockPicture/BlockPicture'));
 
 const BlockControl = (props) => {
   const show = props.show
@@ -59,14 +56,7 @@ const BlockControl = (props) => {
           {show && countPicture}
           {!show && thinkingPicture}
         </Grid>
-        <Grid
-          container
-          item
-          md={12}
-          lg={3}
-          direction="row"
-          justify="center"
-        >
+        <Grid container item md={12} lg={3} direction="row" justify="center">
           <p className="p-blockControl">
             Баллы: <span>{score}</span>
           </p>

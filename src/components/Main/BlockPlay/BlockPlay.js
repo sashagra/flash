@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Control from './BlockControl/BlockControl'
 import Answer from './BlockAnswer/BlockAnswer'
-// import Picture from './BlockPicture/BlockPicture'
-
-
 import './BlockPlay.css'
-//const Picture = React.lazy(() => import('./BlockPicture/BlockPicture'));
+
 const BlockPlay = (props) => {
   const countNumber = props.countNumber
   const countRound = props.countRound
@@ -38,20 +35,27 @@ const BlockPlay = (props) => {
   }
 
   useEffect(() => {
-     setTimeout(() => {
+    setTimeout(() => {
       setShow(false)
-    }, time);
+    }, time)
   }, [countRound, time])
-
-
 
   return (
     <div className="blockPlay">
-      <Control stateHandler={paramsHandler} score={score} show={show} countNumber={countNumber} trueArr={trueArr}/>
-      {/* <div className="blockCard blockShadow">
-
-      </div> */}
-      <Answer rounds={props.countRound} answerHandler={checkAnswer} show={show} score={score} trueArr={trueArr}/>
+      <Control
+        stateHandler={paramsHandler}
+        score={score}
+        show={show}
+        countNumber={countNumber}
+        trueArr={trueArr}
+      />
+      <Answer
+        rounds={props.countRound}
+        answerHandler={checkAnswer}
+        show={show}
+        score={score}
+        trueArr={trueArr}
+      />
     </div>
   )
 }
